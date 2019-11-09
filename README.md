@@ -32,7 +32,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 Follow these steps to set up your project:
 
-- [ ] `fork & clone` this repository.
+- [ ] `fork & clone` this repository. (CHECK)
 - [ ] `cd` into the forked copy of this repository.
 - [ ] **RUN** `yarn` to retrieve all `server-side` the dependencies.
 - [ ] **RUN** `yarn start` or `npm start` to get your API up and running on `http://localhost:3333`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
