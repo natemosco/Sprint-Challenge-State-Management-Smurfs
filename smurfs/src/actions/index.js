@@ -21,10 +21,10 @@ export const getSmurf = () => dispatch => {
         })
 
 };
-export const createSmurf = () => dispatch => {
+export const createSmurf = (SmurfObj) => dispatch => {
     dispatch({ type: CREATE_SMURF_START });
     axios
-        .post("")
+        .post("/smurfs", SmurfObj)
         .then(response => {
             console.log(response);
             dispatch({ type: CREATE_SMURF_SUCCESS, payload: response.data.results })

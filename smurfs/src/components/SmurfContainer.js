@@ -29,4 +29,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {})(CharacterContainer)
+export default connect(mapStateToProps, {})(SmurfContainer)
