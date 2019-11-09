@@ -29,6 +29,9 @@ export const createSmurf = (SmurfObj) => dispatch => {
             console.log(response);
             dispatch({ type: CREATE_SMURF_SUCCESS, payload: response.data.results })
         })
+        .then(response => {
+            getSmurf();
+        })
         .catch(error => {
             console.log("error from create axios", error);
             dispatch({ type: CREATE_SMURF_FAILURE, payload: `${error.response.status} ${error.response.data}` })

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 
-const StyledCharacterCard = styled.div`
+const StyledSmurfCard = styled.div`
     width:250px;
     height:300px;
     background-color:#000b;

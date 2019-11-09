@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { createSurf } from "../actions";
+import { createSmurf } from "../actions";
 
-function Form() {
+function Form(props) {
     const [formValues, setFormValues] = useState({
         name: "",
         age: "",
         height: "",
         id: ""
     })
-    const formUpdater = (e, id) => {
+    const formUpdater = (e) => {
         setFormValues((formValues) => (
             {
                 ...formValues,
-                id: e.target.value
+                [e.tartget.id]: e.target.value
             }
         ))
     };
@@ -30,16 +30,16 @@ function Form() {
     return (
         <form>
             <label htmlFor="name">Smurf Name:</label>
-            <input type="text" id="name" placeholder="ex: Papa Smurf" />
+            <input type="text" id="name" onChange={formUpdater} placeholder="ex: Papa Smurf" />
 
             <label htmlFor="age">Smurf Age:</label>
-            <input type="text" id="age" placeholder="ex: 150" />
+            <input type="text" id="age" onChange={formUpdater} placeholder="ex: 150" />
 
             <label htmlFor="height">Smurf Height:</label>
-            <input type="text" id="height" placeholder="ex: 5cm" />
+            <input type="text" id="height" onChange={formUpdater} placeholder="ex: 5cm" />
 
             <label htmlFor="id">Smurf ID:</label>
-            <input type="text" id="id" placeholder="ex: 32" />
+            <input type="text" id="id" onChange={formUpdater} placeholder="ex: 32" />
 
             <button onClick={onSubmit}>Click Here To Add Smurf</button>
 
